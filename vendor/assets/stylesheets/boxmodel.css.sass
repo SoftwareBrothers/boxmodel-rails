@@ -1,0 +1,94 @@
+// Box-Model v1.0.0 by @szeliga and @asor
+// Copyright 2013 KMP group sp. z o.o.
+// Licensed under MIT License
+
+// Variables
+$step: 5 !default
+$maxValue: 40 !default
+
+// Disabling classes
+.n-m
+  margin: 0 !important
+.n-m-h
+  margin-left: 0 !important
+  margin-right: 0 !important
+.n-m-v
+  margin-top: 0 !important
+  margin-bottom: 0 !important
+.n-m-t
+  margin-top: 0 !important
+.n-m-r
+  margin-right: 0 !important
+.n-m-b
+  margin-bottom: 0 !important
+.n-m-l
+  margin-left: 0 !important
+.n-p
+  padding: 0 !important
+.n-p-h
+  padding-left: 0 !important
+  padding-right: 0 !important
+.n-p-v
+  padding-top: 0 !important
+  padding-bottom: 0 !important
+.n-p-t
+  padding-top: 0 !important
+.n-p-r
+  padding-right: 0 !important
+.n-p-b
+  padding-bottom: 0 !important
+.n-p-l
+  padding-left: 0 !important
+.n-b
+  border: none !important
+.n-b-h
+  border-left: none !important
+  border-right: none !important
+.n-b-v
+  border-top: none !important
+  border-bottom: none !important
+.n-b-t
+  border-top: none !important
+.n-b-r
+  border-right: none !important
+.n-b-b
+  border-bottom: none !important
+.n-b-l
+  border-left: none !important
+
+@for $i from 1 through ceil($maxValue/$step)
+  $val: $step * $i
+  // Four way classes
+  .m-#{$val}
+    margin: $val * 1px !important
+  .p-#{$val}
+    padding: $val * 1px !important
+  // One way classes
+  .m-t-#{$val}
+    margin-top: $val * 1px !important
+  .m-r-#{$val}
+    margin-right: $val * 1px !important
+  .m-b-#{$val}
+    margin-bottom: $val * 1px !important
+  .m-l-#{$val}
+    margin-left: $val * 1px !important
+  .m-h-#{$val}
+    margin-left: $val * 1px !important
+    margin-right: $val * 1px !important
+  .m-v-#{$val}
+    margin-top: $val * 1px !important
+    margin-bottom: $val * 1px !important
+  .p-t-#{$val}
+    padding-top: $val * 1px !important
+  .p-b-#{$val}
+    padding-bottom: $val * 1px !important
+  .p-r-#{$val}
+    padding-right: $val * 1px !important
+  .p-l-#{$val}
+    padding-left: $val * 1px !important
+  .p-h-#{$val}
+    padding-left: $val * 1px !important
+    padding-right: $val * 1px !important
+  .p-v-#{$val}
+    padding-top: $val * 1px !important
+    padding-bottom: $val * 1px !important

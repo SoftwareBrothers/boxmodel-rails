@@ -1,6 +1,6 @@
-# Boxmodel::Rails
+# boxmodel-rails
 
-TODO: Write a gem description
+Provides a pack of css utility classes to set paddings, margins and borders without writting css code
 
 ## Installation
 
@@ -16,9 +16,56 @@ Or install it yourself as:
 
     $ gem install boxmodel-rails
 
+----
+
 ## Usage
 
-TODO: Write usage instructions here
+#### Configuration
+
+In you CSS manifest file add the following line:
+
+```scss
+$step: 1;
+$maxValue: 5;
+@import 'boxmodel';
+```
+
+Variables:
+
+ - `step` - defines the step by which the classes will be generated, e.g. 5 will generate *-5 *-10 etc
+ - `maxValue` - defines the maximum value that will be generated
+
+#### Types of classes
+
+The gem creates four types of classes:
+
+ 1. disabling classes - e.g. `.n-m`, `.n-p`
+ 2. one way classes - e.g. `.m-l-5`, `p-b-5`
+ 3. two way classes - e.g. `.m-v-5`, `.p-h-5`
+ 4. four way classes - e.g. `m-5`, `p-5`
+
+#### Naming convetions
+
+The naming conventions for this shortcuts are as follows:
+
+ - n - no (disabling)
+ - m - margin
+ - p - padding
+ - b - border
+ - l - left
+ - r - right
+ - t - top
+ - b - bottom
+ - v - vertical
+ - h - horizontal
+
+So for example:
+
+ - `.m-5` - `margin: 5px;`
+ - `.m-b-10` - `margin-bottom: 10px;`
+ - `.m-v-10` - `margin-top: 10px; margin-bottom: 10px;`
+
+----
 
 ## Contributing
 
