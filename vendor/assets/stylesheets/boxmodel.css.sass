@@ -62,8 +62,9 @@ $maxValue:  40  !default
   // Four way classes
   .m-#{$val}
     margin: $val * 1px !important
-  .p-#{$val}
-    padding: $val * 1px !important
+  @if $val >= 0
+    .p-#{$val}
+      padding: $val * 1px !important
   // One way classes
   .m-t-#{$val}
     margin-top: $val * 1px !important
@@ -79,17 +80,18 @@ $maxValue:  40  !default
   .m-v-#{$val}
     margin-top: $val * 1px !important
     margin-bottom: $val * 1px !important
-  .p-t-#{$val}
-    padding-top: $val * 1px !important
-  .p-b-#{$val}
-    padding-bottom: $val * 1px !important
-  .p-r-#{$val}
-    padding-right: $val * 1px !important
-  .p-l-#{$val}
-    padding-left: $val * 1px !important
-  .p-h-#{$val}
-    padding-left: $val * 1px !important
-    padding-right: $val * 1px !important
-  .p-v-#{$val}
-    padding-top: $val * 1px !important
-    padding-bottom: $val * 1px !important
+  @if $val >= 0
+    .p-t-#{$val}
+      padding-top: $val * 1px !important
+    .p-b-#{$val}
+      padding-bottom: $val * 1px !important
+    .p-r-#{$val}
+      padding-right: $val * 1px !important
+    .p-l-#{$val}
+      padding-left: $val * 1px !important
+    .p-h-#{$val}
+      padding-left: $val * 1px !important
+      padding-right: $val * 1px !important
+    .p-v-#{$val}
+      padding-top: $val * 1px !important
+      padding-bottom: $val * 1px !important

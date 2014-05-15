@@ -25,8 +25,9 @@ Or install it yourself as:
 In you CSS manifest file add the following line:
 
 ```scss
-$step: 1;
-$maxValue: 5;
+$step:      1;
+$minValue:  -10;
+$maxValue:  10;
 @import 'boxmodel';
 ```
 
@@ -44,7 +45,7 @@ The gem creates four types of classes:
  3. two way classes - e.g. `.m-v-5`, `.p-h-5`
  4. four way classes - e.g. `m-5`, `p-5`
 
-#### Naming convetions
+#### Naming conventions
 
 The naming conventions for this shortcuts are as follows:
 
@@ -63,6 +64,7 @@ So for example:
 
  - `.m-5` - `margin: 5px;`
  - `.m-b-10` - `margin-bottom: 10px;`
+ - `.m-l--7` - `margin-left: -7px;`
  - `.m-v-10` - `margin-top: 10px; margin-bottom: 10px;`
 
 ----
