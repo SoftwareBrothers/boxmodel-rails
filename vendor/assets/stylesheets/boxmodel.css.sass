@@ -3,8 +3,9 @@
 // Licensed under MIT License
 
 // Variables
-$step: 5 !default
-$maxValue: 40 !default
+$step:      5   !default
+$minValue:  0   !default
+$maxValue:  40  !default
 
 // Disabling classes
 .n-m
@@ -56,7 +57,7 @@ $maxValue: 40 !default
 .n-b-l
   border-left: none !important
 
-@for $i from 1 through ceil($maxValue/$step)
+@for $i from $minValue through ceil($maxValue/$step)
   $val: $step * $i
   // Four way classes
   .m-#{$val}
