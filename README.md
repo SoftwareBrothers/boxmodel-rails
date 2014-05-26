@@ -30,11 +30,20 @@ $minValue:  -10;
 $maxValue:  10;
 @import 'boxmodel';
 ```
+You can also generate classes only for specific values. To do so, define a list of values like this:
+ 
+```scss
+$values:    -5,1,2,3,10,40;
+@import 'boxmodel';
+```
+If you set the `$values` to something else than `null`, variables `$step`, `$minValues` and `$maxValue` are not taken into account.
 
 Variables:
 
- - `step` - defines the step by which the classes will be generated, e.g. 5 will generate *-5 *-10 etc
- - `maxValue` - defines the maximum value that will be generated
+ - `step` - defines the step by which the classes will be generated, e.g. 5 will generate *-5 *-10 etc.
+ - `minValue` - defines the minimum value that will be generated.
+ - `maxValue` - defines the maximum value that will be generated.
+ - `values` - defines a list of specific values that will be generated. It's `null` by default. 
 
 #### Types of classes
 
@@ -71,8 +80,8 @@ So for example:
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+1. Fork it.
+2. Create your feature branch (`git checkout -b my-new-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin my-new-feature`).
+5. Create new Pull Request.

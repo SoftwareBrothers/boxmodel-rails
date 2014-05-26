@@ -2,11 +2,51 @@
 // Copyright 2013 KMP group sp. z o.o.
 // Licensed under MIT License
 
-// Variables
-$step:      5   !default
-$minValue:  0   !default
-$maxValue:  40  !default
+// Mixins
+@mixin classes($val)
+  // Four way classes
+  .m-#{$val}
+    margin: $val * 1px !important
+  @if $val >= 0
+    .p-#{$val}
+      padding: $val * 1px !important
+  // One way classes
+  .m-t-#{$val}
+    margin-top: $val * 1px !important
+  .m-r-#{$val}
+    margin-right: $val * 1px !important
+  .m-b-#{$val}
+    margin-bottom: $val * 1px !important
+  .m-l-#{$val}
+    margin-left: $val * 1px !important
+  .m-h-#{$val}
+    margin-left: $val * 1px !important
+    margin-right: $val * 1px !important
+  .m-v-#{$val}
+    margin-top: $val * 1px !important
+    margin-bottom: $val * 1px !important
+  @if $val > 0
+    .p-t-#{$val}
+      padding-top: $val * 1px !important
+    .p-b-#{$val}
+      padding-bottom: $val * 1px !important
+    .p-r-#{$val}
+      padding-right: $val * 1px !important
+    .p-l-#{$val}
+      padding-left: $val * 1px !important
+    .p-h-#{$val}
+      padding-left: $val * 1px !important
+      padding-right: $val * 1px !important
+    .p-v-#{$val}
+      padding-top: $val * 1px !important
+      padding-bottom: $val * 1px !important
 
+// Variables
+$step:      5     !default
+$minValue:  0     !default
+$maxValue:  40    !default
+$values:    null  !default
+      
 // Disabling classes
 .n-m
   margin: 0 !important
@@ -56,42 +96,13 @@ $maxValue:  40  !default
   border-bottom: none !important
 .n-b-l
   border-left: none !important
+  
+@if $values == null
+  @for $i from $minValue through ceil($maxValue/$step)
+    $val: $step * $i
+    @mixin classes($val)
+@else
+  @each $val in $values
+    @mixin classes($val)
 
-@for $i from $minValue through ceil($maxValue/$step)
-  $val: $step * $i
-  // Four way classes
-  .m-#{$val}
-    margin: $val * 1px !important
-  @if $val >= 0
-    .p-#{$val}
-      padding: $val * 1px !important
-  // One way classes
-  .m-t-#{$val}
-    margin-top: $val * 1px !important
-  .m-r-#{$val}
-    margin-right: $val * 1px !important
-  .m-b-#{$val}
-    margin-bottom: $val * 1px !important
-  .m-l-#{$val}
-    margin-left: $val * 1px !important
-  .m-h-#{$val}
-    margin-left: $val * 1px !important
-    margin-right: $val * 1px !important
-  .m-v-#{$val}
-    margin-top: $val * 1px !important
-    margin-bottom: $val * 1px !important
-  @if $val >= 0
-    .p-t-#{$val}
-      padding-top: $val * 1px !important
-    .p-b-#{$val}
-      padding-bottom: $val * 1px !important
-    .p-r-#{$val}
-      padding-right: $val * 1px !important
-    .p-l-#{$val}
-      padding-left: $val * 1px !important
-    .p-h-#{$val}
-      padding-left: $val * 1px !important
-      padding-right: $val * 1px !important
-    .p-v-#{$val}
-      padding-top: $val * 1px !important
-      padding-bottom: $val * 1px !important
+  
