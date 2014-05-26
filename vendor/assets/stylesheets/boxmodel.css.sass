@@ -100,9 +100,9 @@ $values:    null  !default
 @if $values == null
   @for $i from $minValue through ceil($maxValue/$step)
     $val: $step * $i
-    @mixin classes($val)
+    @include classes($val)
 @else
   @each $val in $values
-    @mixin classes($val)
+    @include classes($val)
 
   
