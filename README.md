@@ -2,6 +2,8 @@
 
 Provides a pack of css utility classes to set paddings, margins and borders without writting css code
 
+[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
+
 ## Installation
 
 Add this line to your application's Gemfile:
