@@ -2,8 +2,6 @@
 
 Provides a pack of css utility classes to set paddings, margins and borders without writting css code
 
-[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -87,3 +85,17 @@ So for example:
 3. Commit your changes (`git commit -am 'Add some feature'`).
 4. Push to the branch (`git push origin my-new-feature`).
 5. Create new Pull Request.
+
+## License
+
+boxmodel-rails is Copyright © 2018 SoftwareBrothers.co. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE) file.
+
+## About SoftwareBrothers.co
+
+<img src="https://softwarebrothers.co/assets/images/software-brothers-logo-full.svg" width=240>
+
+
+We’re an open, friendly team that helps clients from all over the world to transform their businesses and create astonishing products.
+
+* We are available to [hire](https://softwarebrothers.co/contact).
+* If you want to work for us - checkout the [career page](https://softwarebrothers.co/career).
